@@ -1,6 +1,9 @@
-div
-  ul
-    = each model as |feed|
-      li
-        = feed-card feed=feed
-  = outlet
+div layout="row"
+  div flex=20
+    = paper-list
+      = each model as |feed|
+        div flex=100
+          = paper-item
+            = feed-card feed=feed
+  div flex=80
+    = outlet
