@@ -1,3 +1,4 @@
 h4
-  = feed.title
+  = link-to "feeds.feed" feed.id
+    = feed.title
 = yield
