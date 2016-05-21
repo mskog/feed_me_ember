@@ -1,9 +1,14 @@
 div layout="column" layout-gt-sm="row"
   div flex=20
-    = paper-list
-      = each model as |feed|
-        div flex=100
-          = paper-item
-            = feed-card feed=feed
+    = paper-nav-container class="site-nav-container"
+      = paper-sidenav class="md-sidenav-left md-whiteframe-z2 site-sidenav" locked-open="gt-sm"
+        = paper-toolbar class="site-content-toolbar"
+          h3 Feeds
+        = paper-content
+          = paper-list
+            = each model as |feed|
+              div flex=100
+                = paper-item
+                  = feed-card feed=feed
   div flex=80
     = outlet
