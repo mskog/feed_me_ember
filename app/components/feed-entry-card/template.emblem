@@ -1,0 +1,9 @@
+= paper-card as |card|
+  = card.title as |title|
+    if feed_entry.image
+      = title.media size="lg" src=bestImage
+    = title.text as |text|
+      = text.headline
+        = feed_entry.title
+      = text.subhead
+        = feed_entry.summary

@@ -1,6 +1,4 @@
 div layout="row"
   = paper-list
     = each model as |feed_entry|
-      div flex=100
-        = paper-item
-          = feed_entry.title
+      = feed-entry-card feed_entry=feed_entry
